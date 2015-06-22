@@ -2,6 +2,10 @@ angular.module('app', [])
 	.controller('demoController', function($scope){
 		$scope.name = 'Daniel'
 		$scope.sayHello = function(){
-			alert('hello');
+			// alert('hello');
+			$scope.greeting = [
+				'hello',
+				$scope.name
+			].join(' ');
 		}
 	})
