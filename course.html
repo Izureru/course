@@ -3,6 +3,27 @@
 	<script type ="text/javascript" src ="angular.js"></script>
 	</head>
 	<body ng-app>
-	<h1>{{'Hello' + 'World'}}</h1>
+	<h1>{{'Hello ' + 'World'}}</h1>
+	<input ng-model="numberA" type="number">
+	<input ng-model="numberB" type="number">
+	
+
+	<p> {{numberA}} + {{numberB}} = {{numberA + numberB}} </p>
+	<p> {{numberA}} - {{numberB}} = {{numberA - numberB}} </p>
+	<p> {{numberA}} * {{numberB}} = {{numberA * numberB}} </p>
+	<p> {{numberA}} / {{numberB}} = {{numberA / numberB}} </p>
+
+
+
+
+
+
+	<!-- <input ng-model='firstName'/> -->
+	<!-- {{firstName}} -->
+
+	<!-- <p style="color:{{color}}">There are {{color}} seconds in a century</p> -->
+	<!-- <input ng-model="age" type="date">{{}}</p> -->
+
+
 	</body>
 </html>
