@@ -6,13 +6,14 @@
 		<script src="angular.js"></script>
 		<script src="closure.js"></script>
 	</head>
-	<body ng-app="app" ng-controller="cityController">
+	<body ng-app="app" ng-controller="itemController">
 		<input ng-model="search"/>{{search}}
+		<button ng-click="getFlickr()">Go</button>
 		<div ng-include src="search"></div>
 		<ul>
-      		<li ng-repeat="city in cities | filter:search">
-      			{{city.name}}
-      			{{city.$index}}
+      		<li ng-repeat="item in items.items | filter:search">
+      			<!-- {{item | json}} -->
+      			<img ng-src="{{item.media.m}}" />
 			</li>
 		</ul>
 
