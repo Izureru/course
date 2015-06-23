@@ -1,5 +1,6 @@
 // var beaver = ['furry', 'chewy', 'taily', 'industrious']
 
+(function(){
 var beaver = {
 	personality: 'scary',
 	sayHello : function(){
@@ -14,7 +15,8 @@ var beaver = {
 		}
 	}
 }
-alert(beaver['wood'].pine['quantity'])
+alert(beaver['wood'].pine['quantity']);
+})();
 // var action = 'sayHello';
 
 // beaver.sayHello();
