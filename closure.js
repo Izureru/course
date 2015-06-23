@@ -1,58 +1,36 @@
-// var Pet = function(){
-// 	this.legs = 0;
-// 	this.ears = 2;
-// }
+angular.module('app', [])
+  .controller('cityController', function($scope) {
 
-// Pet.prototype.ears= 6;
-
-// var Dog = function(){
-// 	Dog.prototype = new Pet();
-// }
-// Pet.prototype.ears = 6;
-// var kitten = new Pet();
-// 	alert(kitten.ears);
-// // kitten.legs = 2;
-
-
-// alert(kitten.legs);
-// var a = ""
-
-// var car = {
-// 	colour:"yellow",
-// 	speed:0,
-// 	speedUp: function(){
-// 		this.speed += 10;
-// 	}
-// }
-
-var Vehicle = function(){
-		this.latitude = 1234,
-		this.longtitude = 2345,
-	moveNorth = function(){
-		this.longtitude += 1;
-	},
-	moveSouth = function(){
-		this.longtitude -= 1;
-	},
-	moveEast = function(){
-		this.latitude += 1;
-	},
-	moveWest = function(){
-		this.latitude -= 1;
-	}
-
-};
-
-var car = new Vehicle();
-
-car.changeOil = function(){
-	alert('oil is changed');
-}
-
-alert(car.latitude);
-car.moveWest;
-alert(car.latitude);
-// var speedUp = car.speedUp;
-// var speed = 0;
-// speedUp();
-// car.speedUp();
+    $scope.cities = [
+    {
+    	name: "Kingston",
+    	country:"Jamaica",
+    	sites: "Bob Marley Museum"
+    },
+    {
+    	name: "Paris",
+    	country:"France",
+    	sites: "Eiffel Tower"
+    },
+    {
+    	name: "London",
+    	country:"England",
+    	sites: "The Thames"
+    },
+    {
+    	name: "Jerusalem",
+    	country:"Israel",
+    	sites: "Temple Mount"
+    },
+    {
+    	name: "Cardiff",
+    	country:"Wales",
+    	sites: "Knowklu"
+    },
+    {
+    	name: "Edinburgh",
+    	country:"Scotland",
+    	sites: "Edinburgh Castle"
+    }
+    ]
+});

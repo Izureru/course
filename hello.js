@@ -1,3 +1,3 @@
-$(function(){
-	$("body").html("Hello jQuery");
-});
+// $(function(){
+// 	$("body").html("Hello jQuery");
+// });
