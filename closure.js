@@ -12,13 +12,26 @@
 // sayHello();
 // alert(a);
 
+// var outer = function(){
+// 	var a = 12;
+// 	var inner = function(){
+// 	alert(a);
+
+// 	}
+// 	inner();
+// }
+
+// outer();
+
 var outer = function(){
 	var a = 12;
 	var inner = function(){
-	alert(a);
-
+		alert(a);
 	}
-	inner();
-}
+	return inner;
+		
+	}
 
-outer();
+var fnc = outer();
+fnc();
+
