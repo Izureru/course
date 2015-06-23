@@ -1,4 +1,5 @@
-var beaver = ['furry', 'chewy', 'taily', 'industrious', function(){alert('hello beaver')}]
+var beaver = ['furry', 'chewy', 'taily', 'industrious']
 
-alert(beaver[4]());
+beaver['personality'] = 'scary';
+alert(beaver['personality']);
 
