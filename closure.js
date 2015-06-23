@@ -4,12 +4,20 @@ var beaver = {
 	personality: 'scary',
 	sayHello : function(){
 		alert('hello');
+	},
+	wood:{
+		pine:{
+			quantity: 'loads'
+		},
+		cedar:{
+			quantity:'not much'
+		}
 	}
 }
+alert(beaver['wood'].pine['quantity'])
+// var action = 'sayHello';
 
-var action = 'sayHello';
-
-beaver.sayHello();
+// beaver.sayHello();
 // beaver['personality'] = 'scary';
 
 // beaver['sayHello'] = function(){
