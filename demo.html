@@ -7,9 +7,14 @@
   </head>
   <body ng-app="app" ng-controller="demoController">
     <div ng-show='vm.loading'>Loading...</div>
-    <pre>
-      <img ng-src="{{flickr.media.m}}"/>
+    <ul>
+      <li ng-repeat = "flicks in flickr.items">
+        <pre>
+      <img ng-src="{{flicks.media.m}}"/>
     </pre>
+      </li>
+    </ul>
+    
   </body>
 </html>
 
