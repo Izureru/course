@@ -7,7 +7,9 @@
   </head>
   <body ng-app="app" ng-controller="demoController">
     <div ng-show='vm.loading'>Loading...</div>
-    <pre>{{flickr | json}}</pre>
+    <pre>
+      <img ng-src="{{flickr.media.m}}"/>
+    </pre>
   </body>
 </html>
 
