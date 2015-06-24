@@ -1,13 +1,10 @@
-angular.module('app', [])
-	.controller('demoController', function($scope){
-		$scope.name = 'Daniel';
-		$scope.description = 'This is who I am';
-		$scope.profile = 'dog.jpg'
-		// $scope.sayHello = function(){
-		// 	// alert('hello');
-		// 	$scope.greeting = [
-		// 		'hello',
-		// 		$scope.name
-		// 	].join(' ');
-		// }
-	})
+
+angular.module('app',[])
+  .controller('catController', function($scope) {
+    $scope.cat = "Garfield";
+  })
+  .filter('firstify', function() {
+  return function(input) {
+    return input[0];
+  }
+});
