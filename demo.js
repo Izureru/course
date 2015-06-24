@@ -1,28 +1,27 @@
-angular.module('app',['github'])
-  .controller('demoController', function($scope, helloService, github) {
-  	// helloService.sayHello();
-  	github.getEvents().success(function(data){
-  		$scope.github = data;
+angular.module('app',['flickr'])
+  .controller('demoController', function($scope, flickr) {
+
+    $scope.vm = this;
+    $scope.vm.loading = true;
+  	flickr.getEvents().success(function(data){
+  		$scope.flickr = data;
+      $scope.vm.loading = false;
   	});
    })
 
-  angular.module('hello', [])
-  .service('helloService', function(){
-  	var service = {
-  		sayHello: function() {
-  			alert('Hey There!');
-  		}
-  	}
-  	return service;
-  })
-
-  angular.module('github', [])
-  .service('github', function($http){
-  	var service = {
+  angular.module('flickr', [])
+    .service('flickr', function($http){
+      var search = 'cats';
+  	 var service = {
   		getEvents:function(){
-  			var url = 'https://';
-  			return $http.json(url);
+  			var url = [
+            'http://api.flickr.com/services/feeds/photos_public.gne?tags=',
+            search,
+            '&tagmode=any&format=json&jsoncallback=JSON_CALLBACK'
+        ].join('');
+  			return $http.jsonp(url);
   		}
   	}
-  })
+    return service;
+  });
     
