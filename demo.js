@@ -1,7 +1,11 @@
-angular.module('app',['hello'])
-  .controller('demoController', function(helloService) {
-  	helloService.sayHello();
-    })
+angular.module('app',['github'])
+  .controller('demoController', function($scope, helloService, github) {
+  	// helloService.sayHello();
+  	github.getEvents().success(function(data){
+  		$scope.github = data;
+  	});
+   })
+
   angular.module('hello', [])
   .service('helloService', function(){
   	var service = {
@@ -10,5 +14,15 @@ angular.module('app',['hello'])
   		}
   	}
   	return service;
+  })
+
+  angular.module('github', [])
+  .service('github', function($http){
+  	var service = {
+  		getEvents:function(){
+  			var url = 'https://';
+  			return $http.json(url);
+  		}
+  	}
   })
     
