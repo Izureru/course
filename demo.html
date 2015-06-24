@@ -5,16 +5,9 @@
     <script src="angular.js"></script>
     <script src="demo.js"></script>
   </head>
-  <body ng-app="app" ng-controller="demoController">
+  <body ng-app="app">
     <div ng-show='vm.loading'>Loading...</div>
-    <ul>
-      <li ng-repeat = "flicks in flickr.items">
-        <pre>
-      <img ng-src="{{flicks.media.m}}"/>
-    </pre>
-      </li>
-    </ul>
-    
+    <div cat-directive></div>
   </body>
 </html>
 
