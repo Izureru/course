@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="angular.js"></script>
+  <script src="demo.js"></script>
+</head>
+<body ng-app="app" ng-controller="demoController" ng-init="test='global'">
+  {{test}}
+  <div outer-directive>
+    World of Wonder
+    <!-- outer: {{test}} -->
+    <!-- <div inner-directive>Inner: {{test}}</div> -->
+  </div>
+</body>
+</html>
